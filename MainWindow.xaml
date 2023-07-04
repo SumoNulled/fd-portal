@@ -11,7 +11,9 @@
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent">
-    <Grid>
 
-    </Grid>
+    <Border Style="{StaticResource MainWindowBorder}">
+        
+    </Border>
+    
 </Window>
