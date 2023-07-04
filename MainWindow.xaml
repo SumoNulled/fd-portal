@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FDPortal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Height="760" Width="1280"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent">
     <Grid>
 
     </Grid>
