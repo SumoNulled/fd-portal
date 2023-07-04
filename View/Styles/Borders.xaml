@@ -3,6 +3,6 @@
     
     <Style x:Key="MainWindowBorder" TargetType="Border">
         <Setter Property="CornerRadius" Value="30"/>
-        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
     </Style>
 </ResourceDictionary>

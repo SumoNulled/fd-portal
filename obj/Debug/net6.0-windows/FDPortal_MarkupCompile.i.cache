@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\DesktopApps\FDPortal\App.xaml
-2832193867
+3498561144
 
 5-872909391
 194101785492
-MainWindow.xaml;View\Styles\Borders.xaml;
+MainWindow.xaml;View\Styles\Borders.xaml;View\Styles\Colors.xaml;
 
 True
 
