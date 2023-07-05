@@ -45,15 +45,45 @@
                     <Grid Grid.Row="1">
                         <StackPanel Orientation="Vertical">
                             <uc:SidebarButton Icon="Home" IsActive="True"/>
-                            <uc:SidebarButton Icon="BookOpenVariant" IsActive="False"/>
-                            <uc:SidebarButton Icon="Email" IsActive="False"/>
-                            <uc:SidebarButton Icon="Cog" IsActive="False"/>
+                            <uc:SidebarButton Icon="BookOpenVariant"/>
+                            <uc:SidebarButton Icon="Email"/>
+                            <uc:SidebarButton Icon="Cog"/>
                         </StackPanel>
-                        <uc:SidebarButton Icon="Power" VerticalAlignment="Bottom" Margin="15" IsActive="False"/>
+                        <uc:SidebarButton Icon="Power" VerticalAlignment="Bottom" Margin="15"/>
                     </Grid>
 
                 </Grid>
             </Border>
+            
+            <!-- Top Menu -->
+            <Grid Grid.Column="1" Margin="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" Margin="20 0 0 0">
+                        <Button Style="{StaticResource topMenuButton}">
+                            <Icon:PackIconMaterial Kind="Bell"/>
+                        </Button>
+
+                        <Button Style="{StaticResource topMenuButton}">
+                            <Icon:PackIconMaterial Kind="Account"/>
+                        </Button>
+
+                        <Button Style="{StaticResource topMenuButton}">
+                            <Image Source="/View/Images/BW.png" Width="30" Height="30"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            
+            <!-- Main Content Start -->
+            <Grid Grid.Row="1" Grid.Column="1" Margin="20 0">
+                
+            </Grid>
+            <!-- Main Content End -->
         </Grid>
     </Border>
     

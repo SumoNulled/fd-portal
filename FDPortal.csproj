@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Images\BW.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Remove="View\Styles\Borders.xaml" />
     <Page Remove="View\Styles\Colors.xaml" />
   </ItemGroup>
@@ -22,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="View\Images\BW.png" />
     <Resource Include="View\Styles\Borders.xaml" />
     <Resource Include="View\Styles\Colors.xaml" />
   </ItemGroup>
