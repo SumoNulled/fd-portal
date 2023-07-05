@@ -43,6 +43,14 @@
             "MahApps.Metro.IconPacks.Material": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             }
           },
           "imports": [
