@@ -4,12 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Height="760" Width="1280"
-        ResizeMode="NoResize"
-        WindowStyle="None"
-        WindowStartupLocation="CenterScreen"
-        AllowsTransparency="True"
-        Background="Transparent">
+        Style="{StaticResource MainWindow}"
+        WindowStartupLocation="CenterScreen">
 
     <Border Style="{StaticResource MainWindowBorder}" MouseDown="Border_MouseDown">
         
@@ -29,14 +25,27 @@
             <!-- Left Sidebar Start -->
             <Border Grid.RowSpan="3" Style="{StaticResource LeftSidebarBorder}">
                 <Grid>
-                    <StackPanel VerticalAlignment="Top">
-                        <!-- Ellipses -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Title Bar Buttons Start -->
+                    <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="30">
                             <Ellipse x:Name="CloseButton" Style="{StaticResource menuBase}" Fill="{DynamicResource CloseColorEllipse}" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown"/>
                             <Ellipse x:Name="MinimizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MinimizeColorELlipse}" Margin="7 0" MouseLeftButtonDown="MinimizeButton_MouseLeftButtonDown"/>
                             <Ellipse x:Name="MaximizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MaximizeColorEllipse}" MouseLeftButtonDown="MaximizeButton_MouseLeftButtonDown"/>
                         </StackPanel>
-                    </StackPanel>
+                    </Grid>
+
+                    <!-- Menu Buttons -->
+                    <Grid Grid.Row="1">
+                        <StackPanel >
+                            <Button Width="100"/>
+                        </StackPanel>
+                    </Grid>
+
                 </Grid>
             </Border>
             <!-- Left Sidebar End -->

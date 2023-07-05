@@ -13,6 +13,9 @@
     <Page Update="View\Styles\Ellipses.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Styles\Windows.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Resource Update="View\Styles\Borders.xaml">
       <SubType>Designer</SubType>
     </Resource>

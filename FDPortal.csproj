@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="ModelView\" />
+    <Folder Include="View\UserControls\" />
   </ItemGroup>
 
   <ItemGroup>

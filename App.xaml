@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="/View/Styles/Borders.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Colors.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Ellipses.xaml"/>
+                <ResourceDictionary Source="/View/Styles/Windows.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
