@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FDPortal"
         mc:Ignorable="d"
         Height="760" Width="1280"
         ResizeMode="NoResize"
@@ -12,8 +11,36 @@
         AllowsTransparency="True"
         Background="Transparent">
 
-    <Border Style="{StaticResource MainWindowBorder}">
+    <Border Style="{StaticResource MainWindowBorder}" MouseDown="Border_MouseDown">
         
+        <!-- Main Container -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/> <!-- Left Sidebar -->
+                <ColumnDefinition Width="*"/> <!-- Main Content -->
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Left Sidebar Start -->
+            <Border Grid.RowSpan="3" Style="{StaticResource LeftSidebarBorder}">
+                <Grid>
+                    <StackPanel VerticalAlignment="Top">
+                        <!-- Ellipses -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="30">
+                            <Ellipse x:Name="CloseButton" Style="{StaticResource menuBase}" Fill="{DynamicResource CloseColorEllipse}" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown"/>
+                            <Ellipse x:Name="MinimizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MinimizeColorELlipse}" Margin="7 0" MouseLeftButtonDown="MinimizeButton_MouseLeftButtonDown"/>
+                            <Ellipse x:Name="MaximizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MaximizeColorEllipse}" MouseLeftButtonDown="MaximizeButton_MouseLeftButtonDown"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <!-- Left Sidebar End -->
+        </Grid>
     </Border>
     
 </Window>

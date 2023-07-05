@@ -8,8 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Page Remove="View\Styles\Borders.xaml" />
+    <Page Remove="View\Styles\Colors.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="ModelView\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Styles\Borders.xaml" />
+    <Resource Include="View\Styles\Colors.xaml" />
   </ItemGroup>
 
 </Project>

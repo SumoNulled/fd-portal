@@ -3,6 +3,11 @@
     
     <Style x:Key="MainWindowBorder" TargetType="Border">
         <Setter Property="CornerRadius" Value="30"/>
-        <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+    </Style>
+
+    <Style x:Key="LeftSidebarBorder" TargetType="Border">
+        <Setter Property="CornerRadius" Value="25 0 0 25"/>
+        <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>
     </Style>
 </ResourceDictionary>
