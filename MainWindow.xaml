@@ -7,7 +7,8 @@
         xmlns:uc="clr-namespace:FDPortal.View.UserControls"
         mc:Ignorable="d"
         Style="{StaticResource MainWindow}"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Name="mainWindow">
 
     <Border Style="{StaticResource MainWindowBorder}" MouseDown="Border_MouseDown">
         
@@ -83,18 +84,8 @@
             
             <!-- Main Content Start -->
             <Grid Grid.Row="1" Grid.Column="1" Margin="20 0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <!-- Info Cards Left -->
-                <StackPanel Margin="10 0">
-                    <uc:Card Number="28" Title="Total Users" IsTechnical="True"/>
-                    <uc:Card Number="59" Title="Total Messages" IsTechnical="True"/>
-                    <uc:Card Number="21" Title="Total Shifts" IsTechnical="True"/>
-                </StackPanel>
+                <ContentControl Content="" Margin="10"/>
+
             </Grid>
             <!-- Main Content End -->
         </Grid>
