@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\DesktopApps\FDPortal\App.xaml
-7-1224076385
+9-578804064
 
-5456613830
+61512436974
 196180760856
-MainWindow.xaml;View\Styles\Buttons.xaml;View\Styles\Ellipses.xaml;View\Styles\Icons.xaml;View\Styles\Windows.xaml;View\UserControls\Icons.xaml;View\UserControls\SidebarButton.xaml;
+MainWindow.xaml;View\Styles\Buttons.xaml;View\Styles\Ellipses.xaml;View\Styles\Icons.xaml;View\Styles\TextBlocks.xaml;View\Styles\Windows.xaml;View\UserControls\Card.xaml;View\UserControls\Icons.xaml;View\UserControls\SidebarButton.xaml;
 
 False
 

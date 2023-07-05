@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\UserControls\Card.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserControls\Icons.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,7 +30,13 @@
     <Page Update="View\Styles\Icons.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Styles\TextBlocks.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Styles\Windows.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\Card.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\Icons.xaml">

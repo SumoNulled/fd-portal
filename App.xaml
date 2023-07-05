@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="/View/Styles/Colors.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Ellipses.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Icons.xaml"/>
+                <ResourceDictionary Source="/View/Styles/TextBlocks.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Windows.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
