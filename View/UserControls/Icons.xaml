@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="FDPortal.View.UserControls.Icons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks">
+    <Grid>
+        <Icon:PackIconMaterial Kind="Tea" Width="15" Height="15"/>
+    </Grid>
+</UserControl>

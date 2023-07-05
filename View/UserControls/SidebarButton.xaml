@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="FDPortal.View.UserControls.SidebarButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" d:DesignWidth="100" Name="sidebarButtonIdentifier">
+    
+    <Button Style="{StaticResource menuButton}" Click="Button_Click">
+        <Grid ClipToBounds="True" x:Name="ButtonsContainer">
+            <Ellipse Style="{StaticResource menuButtonActive}" Margin="-96,-30,96,-30">
+                
+            </Ellipse>
+            <Icon:PackIconMaterial 
+                Kind="{Binding ElementName=sidebarButtonIdentifier,Path=Icon}" Style="{StaticResource menuButtonIcon}"/>
+            <!-- {Binding ElementName=sidebarButtonIdentifier,Path=Icon} -->
+        </Grid>
+    </Button>
+    
+</UserControl>

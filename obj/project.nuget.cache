@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vT0tZHKutqETPAuykEvnuiZM/xYLykxKSdsTFYOHttcF/2WsQG0Q9pcLSvXSnmjB+lAMo6cdJuMkA2viIyg/Nw==",
+  "dgSpecHash": "GfN9A/9Kd1/WmoI1lWwM6w0JJeb545i+zxMq1WLIS1aqpSgYqlZJrklH5jgGWpf0aLqDcsANRiE3y6EfAu6WEw==",
   "success": true,
   "projectFilePath": "C:\\DesktopApps\\FDPortal\\FDPortal.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\enjin\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512"
+  ],
   "logs": []
 }

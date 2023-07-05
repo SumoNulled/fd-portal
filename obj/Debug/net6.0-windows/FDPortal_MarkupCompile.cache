@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\DesktopApps\FDPortal\App.xaml
-31753652207
+7-1224076385
 
-3-1233169557
-194101785492
-MainWindow.xaml;View\Styles\Ellipses.xaml;View\Styles\Windows.xaml;
+5456613830
+196180760856
+MainWindow.xaml;View\Styles\Buttons.xaml;View\Styles\Ellipses.xaml;View\Styles\Icons.xaml;View\Styles\Windows.xaml;View\UserControls\Icons.xaml;View\UserControls\SidebarButton.xaml;
 
 False
 

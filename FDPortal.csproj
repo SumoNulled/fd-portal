@@ -15,7 +15,10 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="ModelView\" />
-    <Folder Include="View\UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
   </ItemGroup>
 
   <ItemGroup>

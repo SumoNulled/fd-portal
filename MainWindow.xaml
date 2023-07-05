@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:uc="clr-namespace:FDPortal.View.UserControls"
         mc:Ignorable="d"
         Style="{StaticResource MainWindow}"
         WindowStartupLocation="CenterScreen">
@@ -22,7 +24,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <!-- Left Sidebar Start -->
+            <!-- Left Sidebar -->
             <Border Grid.RowSpan="3" Style="{StaticResource LeftSidebarBorder}">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -41,14 +43,17 @@
 
                     <!-- Menu Buttons -->
                     <Grid Grid.Row="1">
-                        <StackPanel >
-                            <Button Width="100"/>
+                        <StackPanel Orientation="Vertical">
+                            <uc:SidebarButton Icon="Home" IsActive="True"/>
+                            <uc:SidebarButton Icon="BookOpenVariant" IsActive="False"/>
+                            <uc:SidebarButton Icon="Email" IsActive="False"/>
+                            <uc:SidebarButton Icon="Cog" IsActive="False"/>
                         </StackPanel>
+                        <uc:SidebarButton Icon="Power" VerticalAlignment="Bottom" Margin="15" IsActive="False"/>
                     </Grid>
 
                 </Grid>
             </Border>
-            <!-- Left Sidebar End -->
         </Grid>
     </Border>
     

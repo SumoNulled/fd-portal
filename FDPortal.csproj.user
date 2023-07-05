@@ -7,13 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\UserControls\Icons.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\SidebarButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Styles\Buttons.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Styles\Ellipses.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Styles\Icons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Styles\Windows.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\Icons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\SidebarButton.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="View\Styles\Borders.xaml">
