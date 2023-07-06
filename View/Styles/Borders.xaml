@@ -6,6 +6,17 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
+    <Style x:Key="LoginWindowBorder" TargetType="Border" BasedOn="{StaticResource MainWindowBorder}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0" Color="{DynamicResource GradientPrimary}"/>
+                    <GradientStop Offset="1" Color="{DynamicResource GradientSecondary}"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="LeftSidebarBorder" TargetType="Border">
         <Setter Property="CornerRadius" Value="25 0 0 25"/>
         <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>

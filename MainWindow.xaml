@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:uc="clr-namespace:FDPortal.View.UserControls"
+        xmlns:views="clr-namespace:FDPortal.View"
         mc:Ignorable="d"
         Style="{StaticResource MainWindow}"
         WindowStartupLocation="CenterScreen"
@@ -84,7 +85,11 @@
             
             <!-- Main Content Start -->
             <Grid Grid.Row="1" Grid.Column="1" Margin="20 0">
-                <ContentControl Content="" Margin="10"/>
+                <ContentControl>
+                    <ContentControl.Content>
+                        <views:DashboardView/>
+                    </ContentControl.Content>
+                </ContentControl>
 
             </Grid>
             <!-- Main Content End -->

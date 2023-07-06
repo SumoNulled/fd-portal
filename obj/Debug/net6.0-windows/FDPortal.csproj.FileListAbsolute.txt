@@ -79,3 +79,14 @@ C:\DesktopApps\FDPortal\bin\Debug\net6.0-windows\runtimes\win-arm64\native\e_sql
 C:\DesktopApps\FDPortal\bin\Debug\net6.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\DesktopApps\FDPortal\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\DesktopApps\FDPortal\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\DashboardView.g.cs
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\DashboardView.baml
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\LoginView.g.cs
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\LoginView.baml
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputTextBox.g.cs
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputTextBox.baml
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\Styles\TextBoxes.baml
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputButton.baml
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputButton.g.cs
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputPasswordBox.g.cs
+C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\View\UserControls\InputPasswordBox.baml

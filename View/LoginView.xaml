@@ -1,0 +1,52 @@
+﻿<Window x:Class="FDPortal.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:FDPortal.View.UserControls"
+        mc:Ignorable="d"
+        Style="{StaticResource LoginWindow}"
+        MouseDown="Border_MouseDown"
+        WindowStartupLocation="CenterScreen">
+    <Border Style="{StaticResource LoginWindowBorder}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="{StaticResource SecondaryColor}" CornerRadius="30 30 0 0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 15">
+                            <Ellipse x:Name="CloseButton" Style="{StaticResource menuBase}" Fill="{DynamicResource CloseColorEllipse}" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown"/>
+                            <Ellipse x:Name="MinimizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MinimizeColorELlipse}" Margin="7 0" MouseLeftButtonDown="MinimizeButton_MouseLeftButtonDown"/>
+                            <Ellipse x:Name="MaximizeButton" Style="{StaticResource menuBase}" Fill="{DynamicResource MaximizeColorEllipse}" MouseLeftButtonDown="MaximizeButton_MouseLeftButtonDown"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Margin="30 0">
+                        <TextBlock Text="LOGIN" Style="{StaticResource HeadingThree}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 15 0 0">
+                    <Image Source="/View/Images/BW_Large.png" Width="100"/>
+                    <TextBlock Text="Front Desk Portal" Style="{StaticResource HeadingOne}" HorizontalAlignment="Center"/>
+                    <Separator Margin="0 15" Background="{DynamicResource SecondaryColor}"/>
+                    <uc:InputTextBox Title="Username"/>
+                    <uc:InputPasswordBox Title="Password"/>
+                    <uc:InputButton/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

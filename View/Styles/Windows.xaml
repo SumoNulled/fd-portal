@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="MainWindow" TargetType="Window">
+    <Style x:Key="WindowBase" TargetType="Window">
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Opacity" Value="0.9"/>
@@ -11,4 +11,12 @@
         <Setter Property="Height" Value="760"/>
         <Setter Property="Width" Value="1280"/>
     </Style>
+
+    <Style x:Key="MainWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}"/>
+    
+    <Style x:Key="LoginWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}">
+        <Setter Property="Height" Value="475"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+    
 </ResourceDictionary>

@@ -30,4 +30,18 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
+
+    <Style x:Key="Heading" TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"/>
+    </Style>
+
+    <Style x:Key="HeadingOne" TargetType="TextBlock" BasedOn="{StaticResource Heading}">
+        <Setter Property="FontSize" Value="26"/>
+    </Style>
+
+    <Style x:Key="HeadingThree" TargetType="TextBlock" BasedOn="{StaticResource Heading}">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
 </ResourceDictionary>

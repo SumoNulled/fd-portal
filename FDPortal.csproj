@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="View\Images\BW.png" />
+    <None Remove="View\Images\BW_Large.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,7 @@
 
   <ItemGroup>
     <Resource Include="View\Images\BW.png" />
+    <Resource Include="View\Images\BW_Large.png" />
     <Resource Include="View\Styles\Borders.xaml" />
     <Resource Include="View\Styles\Colors.xaml" />
   </ItemGroup>
