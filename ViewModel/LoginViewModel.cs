@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Security;
 using System.Security.Principal;
 using System.Threading;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FDPortal.ViewModel
@@ -28,7 +29,7 @@ namespace FDPortal.ViewModel
             set
             {
                 _username = value;
-                OnPropertyChanged(nameof(CallerMemberNameAttribute));
+                OnPropertyChanged(nameof(Username));
             }
         }
         public SecureString? Password 
@@ -38,7 +39,7 @@ namespace FDPortal.ViewModel
             set
             {
                 _password = value;
-                OnPropertyChanged(nameof(CallerMemberNameAttribute));
+                OnPropertyChanged(nameof(Password));
             }
         }
         public string? ErrorMessage 
@@ -47,7 +48,7 @@ namespace FDPortal.ViewModel
             set
             {
                 _errorMessage = value;
-                OnPropertyChanged(nameof(CallerMemberNameAttribute));
+                OnPropertyChanged(nameof(ErrorMessage));
             }
         }
         public bool? IsViewVisible 
@@ -56,7 +57,7 @@ namespace FDPortal.ViewModel
             set
             {
                 _isViewVisible = value;
-                OnPropertyChanged(nameof(CallerMemberNameAttribute));
+                OnPropertyChanged(nameof(IsViewVisible));
             }
         }
 
@@ -102,6 +103,7 @@ namespace FDPortal.ViewModel
                 Thread.CurrentPrincipal = new GenericPrincipal(
                     new GenericIdentity(Username), null
                     );
+
                 IsViewVisible = false;
             }
              else

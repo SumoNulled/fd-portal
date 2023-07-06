@@ -8,6 +8,8 @@
     <SolidColorBrush x:Key="PrimaryAccent" Color="#7166f9"/>
     <SolidColorBrush x:Key="PrimaryAccentHover" Color="#938bfc"/>
     <SolidColorBrush x:Key="SecondaryAccent" Color="#b23157"/>
+
+    <SolidColorBrush x:Key="PrimaryError" Color="#fa6b6b"/>
     
     <SolidColorBrush x:Key="PrimaryColorHover" Color="#7368ff"/>
 

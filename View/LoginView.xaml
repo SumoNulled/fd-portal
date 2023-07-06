@@ -13,6 +13,14 @@
     <Window.DataContext>
         <viewModel:LoginViewModel/>
     </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+    
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
+    </Window.Visibility>
     
     <Border Style="{StaticResource LoginWindowBorder}">
         <Grid>
@@ -51,7 +59,7 @@
                     <uc:InputTextBox Title="Username" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     <uc:InputPasswordBox Title="Password" Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-                    <TextBlock Text="{Binding ErrorMessage}" Style="{StaticResource HeadingThree}" Foreground="{DynamicResource SecondaryAccent}" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                    <TextBlock Text="{Binding ErrorMessage, Mode=TwoWay}" Style="{StaticResource HeadingThree}" Foreground="{DynamicResource PrimaryError}" HorizontalAlignment="Center" TextWrapping="Wrap"/>
                     
                     <uc:InputButton Command="{Binding LoginCommand}"/>
                 </StackPanel>

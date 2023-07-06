@@ -50,14 +50,14 @@ namespace FDPortal.Model.Database
         {
             Schema.Add(
                 "usp_Create_Table_Users", 
-                "CREATE TABLE IF NOT EXISTS users (Id INTEGER PRIMARY KEY AUTOINCREMENT, First_Name VARCHAR(50), Last_Name VARCHAR(50), Password VARCHAR(255));"
+                "DROP TABLE users; CREATE TABLE IF NOT EXISTS users (Id INTEGER PRIMARY KEY AUTOINCREMENT, Username VARCHAR(50), First_Name VARCHAR(50), Last_Name VARCHAR(50), Password VARCHAR(255));"
                 );
 
             Schema.Add(
                 "usp_Add_Users",
-                "INSERT INTO users (First_Name, Last_Name, Password) VALUES ('John', 'Doe', 'password123');" +
-                "INSERT INTO users (First_Name, Last_Name, Password) VALUES ('Local', 'Host', 'securepassword');" +
-                "INSERT INTO users (First_Name, Last_Name, Password) VALUES ('Klay', 'Bellator', 'pass1234');"
+                "INSERT INTO users (Username, First_Name, Last_Name, Password) VALUES ('jdoe', 'John', 'Doe', 'password123');" +
+                "INSERT INTO users (Username, First_Name, Last_Name, Password) VALUES ('lhost', 'Local', 'Host', 'securepassword');" +
+                "INSERT INTO users (Username, First_Name, Last_Name, Password) VALUES ('kbellator', 'Klay', 'Bellator', 'pass1234');"
                 );
 
             string combinedQuery = "";
