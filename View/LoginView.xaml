@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:uc="clr-namespace:FDPortal.View.UserControls"
+        xmlns:viewModel="clr-namespace:FDPortal.ViewModel"
         mc:Ignorable="d"
         Style="{StaticResource LoginWindow}"
         MouseDown="Border_MouseDown"
         WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewModel:LoginViewModel/>
+    </Window.DataContext>
+    
     <Border Style="{StaticResource LoginWindowBorder}">
         <Grid>
             <Grid.RowDefinitions>
@@ -42,8 +48,8 @@
                     <Image Source="/View/Images/BW_Large.png" Width="100"/>
                     <TextBlock Text="Front Desk Portal" Style="{StaticResource HeadingOne}" HorizontalAlignment="Center"/>
                     <Separator Margin="0 15" Background="{DynamicResource SecondaryColor}"/>
-                    <uc:InputTextBox Title="Username"/>
-                    <uc:InputPasswordBox Title="Password"/>
+                    <uc:InputTextBox Title="Username" Text="{Binding Username}"/>
+                    <uc:InputPasswordBox Title="Password" Password="{Binding Password}"/>
                     <uc:InputButton/>
                 </StackPanel>
             </Grid>

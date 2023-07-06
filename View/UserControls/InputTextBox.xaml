@@ -12,6 +12,6 @@
         </Grid.RowDefinitions>
 
         <TextBlock Padding="0 5" Grid.Row="0" Text="{Binding ElementName=inputTextBox,Path=Title}" Style="{StaticResource HeadingThree}" HorizontalAlignment="Left"/>
-        <TextBox Grid.Row="1" Width="250" HorizontalAlignment="Left" VerticalAlignment="Stretch" Style="{StaticResource PrimaryTextBox}"/>
+        <TextBox Text="{Binding ElementName=inputTextBox, Path=Text}" Grid.Row="1" Width="250" HorizontalAlignment="Left" VerticalAlignment="Stretch" Style="{StaticResource PrimaryTextBox}"/>
     </Grid>
 </UserControl>

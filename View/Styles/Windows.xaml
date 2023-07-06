@@ -12,7 +12,11 @@
         <Setter Property="Width" Value="1280"/>
     </Style>
 
-    <Style x:Key="MainWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}"/>
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    
+    <Style x:Key="MainWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}">
+        <Setter Property="Visibility" Value="{Binding ElementName=LoginView, Path=IsViewVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+    </Style>
     
     <Style x:Key="LoginWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}">
         <Setter Property="Height" Value="475"/>
