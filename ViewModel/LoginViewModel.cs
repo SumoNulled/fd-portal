@@ -1,6 +1,11 @@
-﻿using System;
+﻿using FDPortal.Model;
+using FDPortal.Model.Repositories;
+using System;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Security;
+using System.Security.Principal;
+using System.Threading;
 using System.Windows.Input;
 
 namespace FDPortal.ViewModel
@@ -12,6 +17,8 @@ namespace FDPortal.ViewModel
         private SecureString? _password;
         private string? _errorMessage;
         private bool? _isViewVisible = true;
+
+        private IUserRepository userRepository;
 
         // Properties
         public string? Username 
@@ -62,6 +69,7 @@ namespace FDPortal.ViewModel
         // Constructor
         public LoginViewModel()
         {
+            userRepository = new UserRepository();
             LoginCommand = new RelayCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             RecoverPasswordCommand = new RelayCommand(p => ExecuteRecoverPasswordCommand("", ""));
         }
@@ -85,7 +93,21 @@ namespace FDPortal.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            var isValidUser = userRepository.AuthenticateUser(
+                new NetworkCredential(Username, Password) 
+                );
+
+            if (isValidUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(
+                    new GenericIdentity(Username), null
+                    );
+                IsViewVisible = false;
+            }
+             else
+            {
+                ErrorMessage = " * Invalid username or password";
+            }
         }
 
         private void ExecuteRecoverPasswordCommand(string username, string email)
