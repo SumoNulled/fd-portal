@@ -16,7 +16,7 @@
     
     <Style x:Key="LoginWindow" TargetType="Window" BasedOn="{StaticResource WindowBase}">
         <Setter Property="Height" Value="475"/>
-        <Setter Property="Width" Value="300"/>
+        <Setter Property="Width" Value="500"/>
     </Style>
     
 </ResourceDictionary>

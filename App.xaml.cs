@@ -1,10 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
-using System;
+﻿using FDPortal.Model.Database;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace FDPortal
@@ -14,7 +9,15 @@ namespace FDPortal
     /// </summary>
     public partial class App : Application
     {
+        Config config = new Config();
+        Database database = new Database();
 
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
 
+           // database.Create(config.getDataSource(), config.getPassword());
+        }
     }
+
 }
