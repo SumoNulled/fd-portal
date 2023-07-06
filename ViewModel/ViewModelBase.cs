@@ -2,7 +2,7 @@
 
 namespace FDPortal.ViewModel
 {
-    public abstract class ViewModelBas : INotifyPropertyChanged
+    public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

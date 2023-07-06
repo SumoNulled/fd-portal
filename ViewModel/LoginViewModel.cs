@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FDPortal.ViewModel
 {
-    class LoginViewModel
+    public class LoginViewModel : ViewModelBase
     {
     }
 }
