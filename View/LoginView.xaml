@@ -48,9 +48,12 @@
                     <Image Source="/View/Images/BW_Large.png" Width="100"/>
                     <TextBlock Text="Front Desk Portal" Style="{StaticResource HeadingOne}" HorizontalAlignment="Center"/>
                     <Separator Margin="0 15" Background="{DynamicResource SecondaryColor}"/>
-                    <uc:InputTextBox Title="Username" Text="{Binding Username}"/>
-                    <uc:InputPasswordBox Title="Password" Password="{Binding Password}"/>
-                    <uc:InputButton/>
+                    <uc:InputTextBox Title="Username" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <uc:InputPasswordBox Title="Password" Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="{Binding ErrorMessage}" Style="{StaticResource HeadingThree}" Foreground="{DynamicResource SecondaryAccent}" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                    
+                    <uc:InputButton Command="{Binding LoginCommand}"/>
                 </StackPanel>
             </Grid>
         </Grid>

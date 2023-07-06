@@ -37,7 +37,7 @@ namespace FDPortal.ViewModel
 
         public void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            _executeAction(parameter);
         }
     }
 }

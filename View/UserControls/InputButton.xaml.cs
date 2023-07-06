@@ -24,5 +24,13 @@ namespace FDPortal.View.UserControls
         {
             InitializeComponent();
         }
+
+        private static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(InputButton));
+
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty);}
+            set { SetValue(CommandProperty, value); }
+        }
     }
 }
