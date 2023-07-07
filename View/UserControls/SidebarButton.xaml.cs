@@ -33,7 +33,7 @@ namespace FDPortal.View.UserControls
         public static readonly DependencyProperty IsActiveProperty =
             DependencyProperty.Register("IsActive", typeof(bool), typeof(SidebarButton));
 
-        private static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(InputButton));
+        private static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(SidebarButton));
 
         public ICommand Command
         {
