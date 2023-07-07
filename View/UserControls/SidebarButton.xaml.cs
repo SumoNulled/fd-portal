@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using MahApps.Metro.IconPacks;
 
 namespace FDPortal.View.UserControls
@@ -32,6 +33,13 @@ namespace FDPortal.View.UserControls
         public static readonly DependencyProperty IsActiveProperty =
             DependencyProperty.Register("IsActive", typeof(bool), typeof(SidebarButton));
 
+        private static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(InputButton));
+
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Set the IsActive property of the clicked button to true

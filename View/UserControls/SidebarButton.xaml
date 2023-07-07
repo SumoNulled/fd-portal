@@ -6,7 +6,7 @@
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" d:DesignWidth="100" Name="sidebarButtonIdentifier">
     
-    <Button Style="{StaticResource menuButton}" Click="Button_Click">
+    <Button Style="{StaticResource menuButton}" Click="Button_Click" Command="{Binding ElementName=sidebarButtonIdentifier,Path=Command}">
         <Grid ClipToBounds="True" x:Name="ButtonsContainer">
             <Ellipse Style="{StaticResource menuButtonActive}" Margin="-96,-30,96,-30">
                 

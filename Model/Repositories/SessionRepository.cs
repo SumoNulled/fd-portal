@@ -9,6 +9,20 @@ namespace FDPortal.Model.Repositories
     class SessionRepository : RepositoryBase
     {
         static Dictionary<string, string> session = new Dictionary<string, string>();
+        public static string SessionToken 
+        {
+            get
+            {
+                if (session.TryGetValue("Session_Token", out string value))
+                {
+                    return value;
+                }
+                else
+                {
+                    return null; // or return any default value
+                }
+            }
+        }
         public static void CreateSession(string sessionToken)
         {
             session.Add("Is_Logged_In", "True");
