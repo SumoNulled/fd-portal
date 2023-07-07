@@ -1268,19 +1268,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\enjin\\.nuget\\packages\\": {}
+    "C:\\Users\\ladyc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DesktopApps\\FDPortal\\FDPortal.csproj",
+      "projectUniqueName": "C:\\Users\\ladyc\\Source\\Repos\\fd-portal\\FDPortal.csproj",
       "projectName": "FDPortal",
-      "projectPath": "C:\\DesktopApps\\FDPortal\\FDPortal.csproj",
-      "packagesPath": "C:\\Users\\enjin\\.nuget\\packages\\",
-      "outputPath": "C:\\DesktopApps\\FDPortal\\obj\\",
+      "projectPath": "C:\\Users\\ladyc\\Source\\Repos\\fd-portal\\FDPortal.csproj",
+      "packagesPath": "C:\\Users\\ladyc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ladyc\\Source\\Repos\\fd-portal\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\enjin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ladyc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
