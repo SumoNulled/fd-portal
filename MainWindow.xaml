@@ -5,12 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:uc="clr-namespace:FDPortal.View.UserControls"
+        xmlns:viewModel="clr-namespace:FDPortal.ViewModel"
+        xmlns:repo="clr-namespace:FDPortal.Model.Repositories"
         xmlns:views="clr-namespace:FDPortal.View"
         mc:Ignorable="d"
         Style="{StaticResource MainWindow}"
         WindowStartupLocation="CenterScreen"
         Name="mainWindow">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
+            <views:DashboardView/>
+        </DataTemplate>
+    </Window.Resources>
     <Border Style="{StaticResource MainWindowBorder}" MouseDown="Border_MouseDown">
         
         <!-- Main Container -->
@@ -46,7 +57,7 @@
                     <!-- Menu Buttons -->
                     <Grid Grid.Row="1">
                         <StackPanel Orientation="Vertical">
-                            <uc:SidebarButton Icon="Home" IsActive="True"/>
+                            <uc:SidebarButton Icon="Home" IsActive="True" Command="{Binding ShowDashboardViewCommand}"/>
                             <uc:SidebarButton Icon="BookOpenVariant"/>
                             <uc:SidebarButton Icon="Email"/>
                             <uc:SidebarButton Icon="Cog"/>
@@ -85,15 +96,11 @@
             
             <!-- Main Content Start -->
             <Grid Grid.Row="1" Grid.Column="1" Margin="35 15">
-                <TextBlock Text="Dashboard" Style="{StaticResource HeadingOne}"/>
+                <TextBlock Text="{Binding CurrentChildViewTitle}" Style="{StaticResource HeadingOne}"/>
             </Grid>
             
             <Grid Grid.Row="2" Grid.Column="1" Margin="20 0">
-                <ContentControl>
-                    <ContentControl.Content>
-                        <views:DashboardView/>
-                    </ContentControl.Content>
-                </ContentControl>
+                <ContentControl Content="{Binding CurrentChildView}"/>
 
             </Grid>
             <!-- Main Content End -->

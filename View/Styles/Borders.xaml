@@ -3,7 +3,14 @@
     
     <Style x:Key="MainWindowBorder" TargetType="Border">
         <Setter Property="CornerRadius" Value="30"/>
-        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0" Color="{DynamicResource GradientPrimary}"/>
+                    <GradientStop Offset="1" Color="{DynamicResource GradientSecondary}"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style x:Key="LoginWindowBorder" TargetType="Border" BasedOn="{StaticResource MainWindowBorder}">

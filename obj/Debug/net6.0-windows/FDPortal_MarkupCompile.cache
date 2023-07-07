@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\DesktopApps\FDPortal\obj\Debug\net6.0-windows\
+C:\Users\ladyc\Source\Repos\fd-portal\obj\Debug\net6.0-windows\
 FDPortal
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\DesktopApps\FDPortal\App.xaml
+C:\Users\ladyc\Source\Repos\fd-portal\App.xaml
 15-1912744959
 
-23-943526718
-214-2053541415
+261492881498
+214-1365746338
 MainWindow.xaml;View\DashboardView.xaml;View\LoginView.xaml;View\Styles\Buttons.xaml;View\Styles\Ellipses.xaml;View\Styles\Icons.xaml;View\Styles\TextBlocks.xaml;View\Styles\TextBoxes.xaml;View\Styles\Windows.xaml;View\UserControls\Card.xaml;View\UserControls\Icons.xaml;View\UserControls\InputButton.xaml;View\UserControls\InputPasswordBox.xaml;View\UserControls\InputTextBox.xaml;View\UserControls\SidebarButton.xaml;
 
 False

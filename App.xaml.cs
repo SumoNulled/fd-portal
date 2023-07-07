@@ -1,4 +1,5 @@
 ﻿using FDPortal.Model.Database;
+using FDPortal.Model.Repositories;
 using FDPortal.View;
 using System.Collections.Generic;
 using System.Windows;
@@ -13,6 +14,7 @@ namespace FDPortal
         Config config = new Config();
         Database database = new Database();
 
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -22,17 +24,27 @@ namespace FDPortal
 
         protected void ApplicationStart(object sender, StartupEventArgs e)
         {
-            var loginView = new LoginView();
-            loginView.Show();
-            loginView.IsVisibleChanged += (s, ev) =>
+            SessionRepository.CreateSession("kbellator");
+
+            if (!SessionRepository.GetLoggedIn())
             {
-                if (loginView.IsVisible == false && loginView.IsLoaded)
+                var loginView = new LoginView();
+                loginView.Show();
+                loginView.IsVisibleChanged += (s, ev) =>
                 {
-                    var mainView = new MainWindow();
-                    mainView.Show();
-                    loginView.Close();
-                }
-            };
+                    if (loginView.IsVisible == false && loginView.IsLoaded)
+                    {
+                        var mainView = new MainWindow();
+                        mainView.Show();
+                        loginView.Close();
+                    }
+                };
+            } 
+            else
+            {
+                var mainView = new MainWindow();
+                mainView.Show();
+            }
         }
 
     }
