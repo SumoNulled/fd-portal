@@ -8,5 +8,6 @@ namespace FDPortal.Model
 {
     class SessionModel
     {
+        public string SessionToken { get; set; }
     }
 }

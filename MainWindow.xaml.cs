@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using FDPortal.Model.Repositories;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FDPortal
@@ -8,9 +9,13 @@ namespace FDPortal
     /// </summary>
     public partial class MainWindow : Window
     {
+        SessionRepository session = new SessionRepository();
         public MainWindow()
         {
-            InitializeComponent();
+            if (SessionRepository.GetLoggedIn())
+            {
+                InitializeComponent();
+            }
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
