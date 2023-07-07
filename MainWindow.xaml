@@ -84,7 +84,11 @@
             </Grid>
             
             <!-- Main Content Start -->
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20 0">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="35 15">
+                <TextBlock Text="Dashboard" Style="{StaticResource HeadingOne}"/>
+            </Grid>
+            
+            <Grid Grid.Row="2" Grid.Column="1" Margin="20 0">
                 <ContentControl>
                     <ContentControl.Content>
                         <views:DashboardView/>
