@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace FDPortal.View.UserControls
@@ -11,6 +13,30 @@ namespace FDPortal.View.UserControls
         public Card()
         {
             InitializeComponent();
+            Loaded += Card_Loaded;
+        }
+
+        private async void Card_Loaded(object sender, RoutedEventArgs e)
+        {
+            int targetNumber = Convert.ToInt32(Number);
+            int duration = 400; // Milliseconds
+            int incrementInterval = 100; // Milliseconds
+            int currentValue = 0;
+            int remainingDifference = targetNumber;
+            int incrementStep;
+
+            while (currentValue < targetNumber)
+            {
+                incrementStep = (int)Math.Ceiling((double)remainingDifference / (duration / incrementInterval));
+                currentValue += incrementStep;
+                if (currentValue > targetNumber)
+                    currentValue = targetNumber;
+
+                Number = Convert.ToString(currentValue);
+                remainingDifference = targetNumber - currentValue;
+
+                await Task.Delay(incrementInterval);
+            }
         }
 
         public string Title

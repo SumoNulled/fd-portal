@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FDPortal.Model;
+using FDPortal.Model.Database;
+using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,8 @@ namespace FDPortal.View
         public DashboardView()
         {
             InitializeComponent();
+
         }
+
     }
 }

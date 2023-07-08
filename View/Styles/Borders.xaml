@@ -26,11 +26,11 @@
 
     <Style x:Key="LeftSidebarBorder" TargetType="Border">
         <Setter Property="CornerRadius" Value="25 0 0 25"/>
-        <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Background" Value="Transparent"/>
     </Style>
 
     <Style x:Key="InfoCardBase" TargetType="Border">
-        <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Background" Value="{DynamicResource AlternatePrimaryColor}"/>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="Margin" Value="0 0 0 20"/>
         <Setter Property="Padding" Value="20"/>

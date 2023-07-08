@@ -41,5 +41,9 @@ namespace FDPortal
 
         }
 
+        private void Power_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

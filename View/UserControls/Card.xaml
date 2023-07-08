@@ -13,8 +13,8 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0">
-                <TextBlock Text="{Binding ElementName=card, Path=Number}" Foreground="{DynamicResource PrimaryForeground}" FontSize="26" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 40 0"/>
+            <Grid Grid.Column="0" >
+                <TextBlock TextAlignment="Center" Text="{Binding ElementName=card, Path=Number}" Width="66" Foreground="{DynamicResource PrimaryForeground}" FontSize="26" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,4,0,0"/>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -26,10 +26,10 @@
 
             <Grid Grid.Column="2">
                 <StackPanel VerticalAlignment="Center">
-                    <Icon:PackIconMaterial Kind="ArrowRight" Foreground="{DynamicResource PrimaryForeground}" Height="17" Width="17" Margin="10"/>
+                    <Icon:PackIconMaterial Kind="ArrowRight" Foreground="{DynamicResource PrimaryForeground}" Height="17" Width="17" Margin="25 15 15 15"/>
                 </StackPanel>
             </Grid>
-            
+
         </Grid>
     </Border>
 </UserControl>

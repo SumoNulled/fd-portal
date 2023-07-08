@@ -10,6 +10,9 @@
     <Compile Update="View\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\EmployeeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\LoginView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -39,10 +42,16 @@
     <Page Update="View\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\EmployeeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\LoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Styles\DataGrids.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Styles\Ellipses.xaml">

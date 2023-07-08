@@ -21,6 +21,10 @@
         <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
             <views:DashboardView/>
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:EmployeeViewModel}">
+            <views:EmployeeView/>
+        </DataTemplate>
     </Window.Resources>
     <Border Style="{StaticResource MainWindowBorder}" MouseDown="Border_MouseDown">
         
@@ -58,11 +62,11 @@
                     <Grid Grid.Row="1">
                         <StackPanel Orientation="Vertical">
                             <uc:SidebarButton Icon="Home" IsActive="True" Command="{Binding ShowDashboardViewCommand}"/>
-                            <uc:SidebarButton Icon="BookOpenVariant"/>
+                            <uc:SidebarButton Icon="BookOpenVariant" Command="{Binding ShowEmployeeViewCommand}"/>
                             <uc:SidebarButton Icon="Email"/>
                             <uc:SidebarButton Icon="Cog"/>
                         </StackPanel>
-                        <uc:SidebarButton Icon="Power" VerticalAlignment="Bottom" Margin="15"/>
+                        <uc:SidebarButton x:Name="btnPower" Icon="Power" VerticalAlignment="Bottom" Margin="15" MouseLeftButtonDown="Power_MouseLeftButtonDown"/>
                     </Grid>
 
                 </Grid>
@@ -95,7 +99,7 @@
             </Grid>
             
             <!-- Main Content Start -->
-            <Grid Grid.Row="1" Grid.Column="1" Margin="35 15">
+            <Grid Grid.Row="1" Grid.Column="1" Margin="35 0 0 15">
                 <TextBlock Text="{Binding CurrentChildViewTitle}" Style="{StaticResource HeadingOne}"/>
             </Grid>
             

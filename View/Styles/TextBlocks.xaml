@@ -7,7 +7,7 @@
 
         <Style.Triggers>
             <DataTrigger Binding="{Binding ElementName=card, Path=IsTechnical}" Value="True">
-                <Setter Property="Text" Value="Technical Hiring"/>
+                <Setter Property="Text" Value="Today's Stats"/>
             </DataTrigger>
 
             <DataTrigger Binding="{Binding ElementName=card, Path=IsTechnical}" Value="False">

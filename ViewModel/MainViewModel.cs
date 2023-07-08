@@ -11,6 +11,7 @@ namespace FDPortal.ViewModel
         public MainViewModel() 
         {
             ShowDashboardViewCommand = new RelayCommand(ExecuteShowDashboardViewCommand);
+            ShowEmployeeViewCommand = new RelayCommand(ExecuteShowEmployeeViewCommand);
 
             // Default View
             ExecuteShowDashboardViewCommand(null);
@@ -20,6 +21,12 @@ namespace FDPortal.ViewModel
         {
             CurrentChildView = new DashboardViewModel();
             CurrentChildViewTitle = "Dashboard";
+        }
+
+        private void ExecuteShowEmployeeViewCommand(object obj)
+        {
+            CurrentChildView = new EmployeeViewModel();
+            CurrentChildViewTitle = "Employees";
         }
 
         public ViewModelBase CurrentChildView 
@@ -44,5 +51,6 @@ namespace FDPortal.ViewModel
 
         // Commands
         public ICommand ShowDashboardViewCommand { get; }
+        public ICommand ShowEmployeeViewCommand { get; }
     }
 }

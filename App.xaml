@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="/View/Styles/Buttons.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Borders.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/View/Styles/DataGrids.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Ellipses.xaml"/>
                 <ResourceDictionary Source="/View/Styles/Icons.xaml"/>
                 <ResourceDictionary Source="/View/Styles/TextBlocks.xaml"/>

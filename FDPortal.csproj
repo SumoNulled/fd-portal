@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Images\btor_transparent.png" />
     <None Remove="View\Images\BW.png" />
     <None Remove="View\Images\BW_Large.png" />
   </ItemGroup>
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="View\Images\btor_transparent.png" />
     <Resource Include="View\Images\BW.png" />
     <Resource Include="View\Images\BW_Large.png" />
     <Resource Include="View\Styles\Borders.xaml" />

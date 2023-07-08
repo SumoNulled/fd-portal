@@ -17,9 +17,22 @@
         <!-- Info Cards Left -->
         <Grid Grid.Column="0">
             <StackPanel Margin="10 0">
-                <uc:Card Number="28" Title="Total Users" IsTechnical="True"/>
-                <uc:Card Number="59" Title="Total Messages" IsTechnical="True"/>
-                <uc:Card Number="21" Title="Total Shifts" IsTechnical="True"/>
+                <uc:Card Number="82" Title="Total In-House Guests" IsTechnical="True"/>
+                <uc:Card Number="11" Title="Total Rooms Available" IsTechnical="True"/>
+                <uc:Card Number="9" Title="Total Clocked In" IsTechnical="True"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <StackPanel Margin="10 0">
+                <uc:Card Number="9" Title="Total Arrivals" IsTechnical="True"/>
+                <uc:Card Number="32" Title="Total Departures" IsTechnical="True"/>
+                <uc:Card Number="2" Title="Total On-Call" IsTechnical="True"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <StackPanel Margin="10 5">
             </StackPanel>
         </Grid>
     </Grid>

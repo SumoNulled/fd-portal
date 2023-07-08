@@ -5,6 +5,12 @@
     <SolidColorBrush x:Key="PrimaryColor" Color="#151f2d"/>
     <SolidColorBrush x:Key="SecondaryColor" Color="#1e2e44"/>
     
+    <SolidColorBrush x:Key="AlternatePrimaryColor" Color="#80151f2d"/>
+
+
+    <SolidColorBrush x:Key="AlternateSecondaryColor" Color="#303e52"/>
+    
+    
     <SolidColorBrush x:Key="PrimaryAccent" Color="#7166f9"/>
     <SolidColorBrush x:Key="PrimaryAccentHover" Color="#938bfc"/>
     <SolidColorBrush x:Key="SecondaryAccent" Color="#b23157"/>
@@ -19,6 +25,11 @@
     
     <Color x:Key="GradientPrimary">#151f2d</Color>
     <Color x:Key="GradientSecondary">#364c6b</Color>
+
+    <Color x:Key="GradientAlternatePrimary">#3b4b63</Color>
+    <Color x:Key="GradientAlternateSecondary">#303e52</Color>
+
+
 
 
 </ResourceDictionary>
