@@ -19,7 +19,7 @@ namespace FDPortal
         {
             base.OnStartup(e);
 
-           //database.Create(config.getDataSource(), config.getPassword());
+          // database.Create(config.getDataSource(), config.getPassword());
         }
 
         protected void ApplicationStart(object sender, StartupEventArgs e)

@@ -47,20 +47,23 @@ namespace FDPortal.Model.Repositories
 
         public static bool GetLoggedIn()
         {
+            bool logged_in = false;
+
             if (session.ContainsKey("Is_Logged_In"))
             {
                 switch (session["Is_Logged_In"])
                 {
                     case "True":
-                        return true;
+                        logged_in = true;
                         break;
 
                     default:
-                        return false;
+                        logged_in = false;
                         break;
                 }
             }
-            return false;
+
+            return logged_in;
         }
     }
 }

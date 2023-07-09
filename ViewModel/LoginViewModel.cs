@@ -73,13 +73,6 @@ namespace FDPortal.ViewModel
             userRepository = new UserRepository();
             LoginCommand = new RelayCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             RecoverPasswordCommand = new RelayCommand(p => ExecuteRecoverPasswordCommand("", ""));
-
-            // Create a new instance of SecureString and add each character of the password string
-            string password = "pass1234";
-            foreach (char c in password)
-            {
-                _password.AppendChar(c);
-            }
         }
 
         private bool CanExecuteLoginCommand(object obj)

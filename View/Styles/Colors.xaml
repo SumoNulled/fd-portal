@@ -6,6 +6,7 @@
     <SolidColorBrush x:Key="SecondaryColor" Color="#1e2e44"/>
     
     <SolidColorBrush x:Key="AlternatePrimaryColor" Color="#80151f2d"/>
+    <SolidColorBrush x:Key="AltSecondaryColor" Color="#60151f2d"/>
 
 
     <SolidColorBrush x:Key="AlternateSecondaryColor" Color="#303e52"/>
@@ -22,7 +23,13 @@
     <SolidColorBrush x:Key="PrimaryForeground" Color="#edeeee"/>
 
     <Color x:Key="PrimaryForegroundHover">#7368ff</Color>
-    
+
+    <SolidColorBrush x:Key="Green" Color="#5ead5f"/>
+    <SolidColorBrush x:Key="GreenHover" Color="#76c477"/>
+
+    <SolidColorBrush x:Key="Red" Color="#ad5e5e"/>
+    <SolidColorBrush x:Key="RedHover" Color="#c47676"/>
+
     <Color x:Key="GradientPrimary">#151f2d</Color>
     <Color x:Key="GradientSecondary">#364c6b</Color>
 

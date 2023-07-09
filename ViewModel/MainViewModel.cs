@@ -5,8 +5,8 @@ namespace FDPortal.ViewModel
 {
     class MainViewModel : ViewModelBase
     {
-        private ViewModelBase _currentChildView;
-        private string _currentChildViewTitle;
+        private ViewModelBase? _currentChildView;
+        private string? _currentChildViewTitle;
 
         public MainViewModel() 
         {

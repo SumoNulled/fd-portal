@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Images\acrylic_one.jpg" />
+    <None Remove="View\Images\acrylic_one.png" />
     <None Remove="View\Images\btor_transparent.png" />
     <None Remove="View\Images\BW.png" />
     <None Remove="View\Images\BW_Large.png" />
@@ -25,6 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="View\Images\acrylic_one.jpg" />
+    <Resource Include="View\Images\acrylic_one.png" />
     <Resource Include="View\Images\btor_transparent.png" />
     <Resource Include="View\Images\BW.png" />
     <Resource Include="View\Images\BW_Large.png" />

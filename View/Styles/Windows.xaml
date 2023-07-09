@@ -4,7 +4,7 @@
     <Style x:Key="WindowBase" TargetType="Window">
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Opacity" Value="0.95"/>
+        <Setter Property="Opacity" Value=".95"/>
         <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="WindowStyle" Value="None"/>
         

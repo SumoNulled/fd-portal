@@ -10,6 +10,7 @@ namespace FDPortal.Model
     public interface IUserRepository
     {
         bool AuthenticateUser(NetworkCredential credential);
+        bool IsClockedIn(int id);
         void Add(UserModel userModel);
         void Edit(UserModel userModel);
         void Remove(int id);
@@ -17,5 +18,8 @@ namespace FDPortal.Model
         UserModel GetById(int id);
         UserModel GetByUsername(int id);
         IEnumerable<UserModel> GetByAll();
+
+        void ClockIn(int id);
+        void ClockOut(int id);
     }
 }

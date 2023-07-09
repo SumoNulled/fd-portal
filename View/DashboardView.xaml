@@ -3,20 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FDPortal.View"
+             xmlns:viewModel="clr-namespace:FDPortal.ViewModel"
              xmlns:uc="clr-namespace:FDPortal.View.UserControls"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
+             Name="dashboard"
              >
+
+    <UserControl.DataContext>
+        <viewModel:DashboardViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Info Cards Left -->
         <Grid Grid.Column="0">
-            <StackPanel Margin="10 0">
+            <StackPanel Margin="5 0">
                 <uc:Card Number="82" Title="Total In-House Guests" IsTechnical="True"/>
                 <uc:Card Number="11" Title="Total Rooms Available" IsTechnical="True"/>
                 <uc:Card Number="9" Title="Total Clocked In" IsTechnical="True"/>
@@ -24,16 +31,33 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <StackPanel Margin="10 0">
+            <StackPanel Margin="5 0 10 0">
                 <uc:Card Number="9" Title="Total Arrivals" IsTechnical="True"/>
                 <uc:Card Number="32" Title="Total Departures" IsTechnical="True"/>
                 <uc:Card Number="2" Title="Total On-Call" IsTechnical="True"/>
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Column="2">
-            <StackPanel Margin="10 5">
-            </StackPanel>
-        </Grid>
+        <Border Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource InfoCardBase}" CornerRadius="10" VerticalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <DataGrid x:Name="employeesDataGrid" Style="{StaticResource ClockInDataGrid}" SelectionMode="Extended" SelectionUnit="FullRow" 
+                              FrozenColumnCount="1" AutoGenerateColumns="False" Height="auto" 
+                              GridLinesVisibility="None" IsReadOnly="True" SelectedItem="{Binding SelectedGridItem}">
+
+                    </DataGrid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    
+                    <Button Style="{StaticResource primaryButton}" Width="150" Content="View" HorizontalAlignment="Left" Margin="0 20 5 0"/>
+                    <Button Style="{StaticResource clockInButton}" Width="285" HorizontalAlignment="Right" Margin="5 20 0 0" Command="{Binding ChangeClockedInCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
