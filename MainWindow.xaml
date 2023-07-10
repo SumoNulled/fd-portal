@@ -103,7 +103,7 @@
                 <TextBlock Text="{Binding CurrentChildViewTitle}" Style="{StaticResource HeadingOne}"/>
             </Grid>
             
-            <Grid Grid.Row="2" Grid.Column="1" Margin="20 0 40 0">
+            <Grid Grid.Row="2" Grid.Column="1" Margin="20 0 40 10">
                 <ContentControl Content="{Binding CurrentChildView}"/>
 
             </Grid>

@@ -61,7 +61,7 @@ namespace FDPortal.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FDPortal;component/view/usercontrols/inputtextbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FDPortal;V1.0.0.0;component/view/usercontrols/inputtextbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\InputTextBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

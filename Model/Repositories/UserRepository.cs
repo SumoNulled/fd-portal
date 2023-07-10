@@ -59,17 +59,19 @@ namespace FDPortal.Model.Repositories
 
         public void ClockIn(int id)
         {
-
             using (var connection = GetConnection())
             {
                 using (var command = connection.CreateCommand())
                 {
                     connection.Open();
                     command.Connection = connection;
-                    command.CommandText = "UPDATE [Users] SET clocked_in=@clocked_in WHERE id=@id";
-                    command.Parameters.Add("@clocked_in", SqliteType.Integer).Value = 1;
-                    command.Parameters.Add("@id", SqliteType.Integer).Value = id;
-                    
+                    command.CommandText = "UPDATE Users SET clocked_in = @clocked_in WHERE id = @id";
+                    command.Parameters.AddWithValue("@clocked_in", 1);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "INSERT INTO timesheets (User_Id, Clock_In) VALUES (@user_id, datetime('now', 'localtime'))";
+                    command.Parameters.AddWithValue("@user_id", id);
                     command.ExecuteNonQuery();
                 }
             }
@@ -77,21 +79,24 @@ namespace FDPortal.Model.Repositories
 
         public void ClockOut(int id)
         {
-
             using (var connection = GetConnection())
             {
                 using (var command = connection.CreateCommand())
                 {
                     connection.Open();
                     command.Connection = connection;
-                    command.CommandText = "UPDATE [Users] SET clocked_in=@clocked_in WHERE id=@id";
-                    command.Parameters.Add("@clocked_in", SqliteType.Integer).Value = 0;
-                    command.Parameters.Add("@id", SqliteType.Integer).Value = id;
+                    command.CommandText = "UPDATE Users SET clocked_in = @clocked_in WHERE id = @id";
+                    command.Parameters.AddWithValue("@clocked_in", 0);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
 
+                    command.CommandText = "UPDATE timesheets SET Clock_Out = datetime('now', 'localtime') WHERE User_Id = @user_id AND Clock_Out IS NULL";
+                    command.Parameters.AddWithValue("@user_id", id);
                     command.ExecuteNonQuery();
                 }
             }
         }
+
 
         public bool IsClockedIn(int id)
         {

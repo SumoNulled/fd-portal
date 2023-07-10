@@ -54,6 +54,11 @@ namespace FDPortal.Model.Database
                 );
 
             Schema.Add(
+                "usp_Create_Table_Timesheets",
+                "CREATE TABLE IF NOT EXISTS timesheets (Id INTEGER PRIMARY KEY AUTOINCREMENT, User_Id INTEGER, Clock_In TIMESTAMP, Clock_Out TIMESTAMP);"
+                );
+
+            Schema.Add(
                 "usp_Add_Users",
     "INSERT INTO users (Username, First_Name, Last_Name, Password) VALUES ('jdoe', 'John', 'Doe', 'password123');" +
     "INSERT INTO users (Username, First_Name, Last_Name, Password) VALUES ('lhost', 'Local', 'Host', 'securepassword');" +

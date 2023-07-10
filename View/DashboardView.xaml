@@ -6,6 +6,7 @@
              xmlns:viewModel="clr-namespace:FDPortal.ViewModel"
              xmlns:uc="clr-namespace:FDPortal.View.UserControls"
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              Name="dashboard"
              >
@@ -21,8 +22,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
         <!-- Info Cards Left -->
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0" Margin="0 0 15 0">
             <StackPanel Margin="5 0">
                 <uc:Card Number="82" Title="Total In-House Guests" IsTechnical="True"/>
                 <uc:Card Number="11" Title="Total Rooms Available" IsTechnical="True"/>
@@ -30,8 +36,8 @@
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Column="1">
-            <StackPanel Margin="5 0 10 0">
+        <Grid Grid.Column="1" Margin="0 0 15 0">
+            <StackPanel Margin="5 0 14 0">
                 <uc:Card Number="9" Title="Total Arrivals" IsTechnical="True"/>
                 <uc:Card Number="32" Title="Total Departures" IsTechnical="True"/>
                 <uc:Card Number="2" Title="Total On-Call" IsTechnical="True"/>
@@ -55,8 +61,17 @@
                 <Grid Grid.Row="1">
                     
                     <Button Style="{StaticResource primaryButton}" Width="150" Content="View" HorizontalAlignment="Left" Margin="0 20 5 0"/>
-                    <Button Style="{StaticResource clockInButton}" Width="285" HorizontalAlignment="Right" Margin="5 20 0 0" Command="{Binding ChangeClockedInCommand}"/>
+                    <Button Style="{StaticResource clockInButton}" Width="250" HorizontalAlignment="Right" Margin="5 20 0 0" Command="{Binding ChangeClockedInCommand}"/>
                 </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource InfoCardBase}" Margin="5 23 29 20">
+            <Grid>
+                <TextBlock Text="Hours Worked" Style="{StaticResource HeadingTwo}"/>
+                <lvc:CartesianChart>
+                    
+                </lvc:CartesianChart>
             </Grid>
         </Border>
     </Grid>

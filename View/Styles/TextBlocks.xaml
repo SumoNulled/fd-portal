@@ -40,6 +40,12 @@
         <Setter Property="FontSize" Value="26"/>
     </Style>
 
+    <Style x:Key="HeadingTwo" TargetType="TextBlock" BasedOn="{StaticResource Heading}">
+        <Setter Property="FontSize" Value="19"/>
+
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
     <Style x:Key="HeadingThree" TargetType="TextBlock" BasedOn="{StaticResource Heading}">
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="SemiBold"/>

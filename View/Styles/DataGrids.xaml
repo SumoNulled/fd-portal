@@ -4,7 +4,6 @@
     <Style x:Key="ClockInDataGrid" TargetType="DataGrid">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"/>
-        <Setter Property="RowBackground" Value="Transparent" />
         <Setter Property="HeadersVisibility" Value="Column" />
         <Setter Property="Height" Value="300"/>
         <Setter Property="Template">
@@ -29,15 +28,13 @@
             <Setter.Value>
                 <Style TargetType="DataGridCell">
                     <Setter Property="Background" Value="Transparent" />
-                    <Setter Property="Padding" Value="15" />
-                    <Setter Property="Margin" Value="10" />
-                    <Setter Property="HorizontalAlignment" Value="Center" />
-
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="BorderThickness" Value="0" />
-                        </Trigger>
-                    </Style.Triggers>
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
                 </Style>
             </Setter.Value>
         </Setter>
@@ -46,7 +43,10 @@
                 <Style TargetType="DataGridRow">
                     <Setter Property="Background" Value="{DynamicResource AltSecondaryColor}" />
                     <Setter Property="Padding" Value="15" />
+                    <Setter Property="Height" Value="35" />
                     <Setter Property="Margin" Value="5" />
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="DataGridRow">
@@ -62,7 +62,8 @@
                                         </SelectiveScrollingGrid.ColumnDefinitions>
                                         <DataGridCellsPresenter Grid.Column="1"
                                                             ItemsPanel="{TemplateBinding ItemsPanel}"
-                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                            VerticalAlignment="Center"/>
                                         <DataGridDetailsPresenter Grid.Column="1"
                                                               SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                                               Visibility="{TemplateBinding DetailsVisibility}"/>
@@ -91,7 +92,6 @@
             <Setter.Value>
                 <Style TargetType="DataGridRowHeader">
                     <Setter Property="Background" Value="Transparent" />
-                    <Setter Property="Padding" Value="15" />
                 </Style>
             </Setter.Value>
         </Setter>

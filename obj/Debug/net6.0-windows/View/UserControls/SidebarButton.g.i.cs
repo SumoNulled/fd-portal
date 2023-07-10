@@ -70,7 +70,7 @@ namespace FDPortal.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FDPortal;component/view/usercontrols/sidebarbutton.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FDPortal;V1.0.0.0;component/view/usercontrols/sidebarbutton.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\SidebarButton.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
